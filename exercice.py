@@ -18,32 +18,43 @@ def use_prefixes() -> List[str]:
     List = [prefixes[0]+suffixe, prefixes[1]+suffixe, prefixes[2]+suffixe, prefixes[3]+suffixe, prefixes[4]+suffixe, prefixes[5]+suffixe, prefixes[6]+suffixe, prefixes[6]+suffixe]
     return [List]
 
-
 def prime_integer_summation() -> int:
-
-    x = range(0,100)
-    while x<=100:
-       for char in x:
-           if num >1:
-                pass
-           if (char % num) == 0:
+    prime = [2, 3, 5,]
+    number = 6
+    while len(prime) < 100:
+        is_prime = True
+        for diviseur in range(2, number // 2):
+            if number % diviseur == 0:
+                is_prime = False
                 break
-    else:
-        print(char)
 
-    return char
+        if is_prime:
+            prime.append(number)
 
+        number += 1
+
+    return sum(prime)
 
 def factorial(number: int) -> int:
-    return 0
+    factorielle = 1
+
+    for el in range(1, number + 1):
+        factorielle = factorielle * el
+    return factorielle
+
 
 
 def use_continue() -> None:
-    pass
+    for number in range(1,10):
+        if number == 5:
+            continue
+        else:
+            print(number)
+
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
-    return []
+   pass
 
 
 def main() -> None:
