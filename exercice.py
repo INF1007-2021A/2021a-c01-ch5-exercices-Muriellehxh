@@ -1,8 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 from typing import List
+
+
+def indice(essai, reponse):
+    indices = []
+    essai = [input('Entrez un chiffre: '), input('Entrez un chiffre:'), input('Entrez un chiffre:'), input('Entrez un chiffre:')
+
+
+
+
+
+
+
 
 
 def convert_to_absolute(number: float) -> float:
