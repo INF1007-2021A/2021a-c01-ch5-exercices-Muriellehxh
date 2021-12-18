@@ -4,68 +4,60 @@
 from typing import List
 
 
-def indice(essai, reponse):
-    indices = []
-    essai = [input('Entrez un chiffre: '), input('Entrez un chiffre:'), input('Entrez un chiffre:'), input('Entrez un chiffre:')
-
-
-
-
-
-
-
-
 
 def convert_to_absolute(number: float) -> float:
-    if number > 0:
-        pass
+    if number < 0:
+        return number*-1
     else:
-        number = -1 * number
-    return number
+        return number
+
 
 
 def use_prefixes() -> List[str]:
-    prefixes, suffixe = 'JKLMNOPQ', 'ack'
-    List = [prefixes[0]+suffixe, prefixes[1]+suffixe, prefixes[2]+suffixe, prefixes[3]+suffixe, prefixes[4]+suffixe, prefixes[5]+suffixe, prefixes[6]+suffixe, prefixes[6]+suffixe]
-    return [List]
+    prefixes = 'JKLMNOPQ'
+    suffixe = 'ack'
+
+    length = 0
+    for char in prefixes:
+        length += 1
+
+    n = 0
+    list_name = []
+    while n<length:
+        list_name.append(prefixes[n] + suffixe)
+        n+=1
+
+    return list_name
+
 
 def prime_integer_summation() -> int:
-    prime = [2, 3, 5,]
-    number = 6
-    while len(prime) < 100:
-        is_prime = True
-        for diviseur in range(2, number // 2):
-            if number % diviseur == 0:
-                is_prime = False
-                break
 
-        if is_prime:
-            prime.append(number)
+    list_prime = []
+    numbers_totest = range(1,1000)
+    for number in numbers_totest:
+        for div_number in numbers_totest:
+            if div_number == number:
+                continue
+            elif number % div_number != 0:
+                list_prime.append(number)
 
-        number += 1
+    addition = sum(list_prime)
+    return addition
 
-    return sum(prime)
 
 def factorial(number: int) -> int:
-    factorielle = 1
-
-    for el in range(1, number + 1):
-        factorielle = factorielle * el
-    return factorielle
-
-
+    n = 1
+    for num in range(1, number+1):
+        n *= num
+    return n
 
 def use_continue() -> None:
-    for number in range(1,10):
-        if number == 5:
-            continue
-        else:
-            print(number)
+    pass
 
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
-   pass
+    pass
 
 
 def main() -> None:
