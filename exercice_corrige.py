@@ -64,8 +64,23 @@ def use_continue() -> None:
 
 
 
-def verify_ages(groups: List[List[int]]) -> List[bool]:
-   pass
+def verify_ages(groups: List[List[int]]) -> List[bool]:  # corrigé
+
+    acceptance = []
+    for group in groups:
+        if len(group) > 10 or len(group) <= 3:  # if group respects conditions, acceptance <= False
+            acceptance.append(False)
+            continue  # BYPASSES next statements to start another for loop
+        if 25 in group:
+            acceptance.append(True)
+            continue  # BYPASSES next statements to start another for loop
+        if (min(group) < 18) or (50 in group and max(group) > 70):  # skip statement => False
+            acceptance.append(False)
+            continue  # SKIPS the next lines!!! Starts another for loop
+
+        acceptance.append(True)
+
+    return acceptance
 
 
 def main() -> None:
